@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+}
+
+main{
+    width: 80vw;
+}
+
+main > * {
+    width: 100%;
+}
+
+main > section > * {
+    height: 30px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main > ul {
+    background-color: white;
+    overflow: scroll
+}
+
+#chat-box {
+    border: 1px solid coral;
+    height: 100px;
+}

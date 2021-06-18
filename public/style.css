@@ -1,31 +1,133 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: yellow;
+:root {
+  --bg-primary: #c6def1;
+  --bg-active: white;
+  --bg-btn-main: #e2cfc4;
 }
 
-main{
-    width: 80vw;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-main > * {
-    width: 100%;
+main {
+  width: 80vw;
+  max-width: 800px;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 200px auto;
 }
 
-main > section > * {
-    height: 30px;
-    box-sizing: border-box;
-    margin: 0;
+#user-channel-list {
+  height: 100%;
+  border: 1px solid red;
+  background-color: var(--bg-primary);
+  overflow: scroll;
 }
 
-main > ul {
-    background-color: white;
-    overflow: scroll
+/* width */
+#user-channel-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+#user-channel-list::-webkit-scrollbar-track {
+  background: #abe4ff00;
+  width: 0px;
+}
+
+/* Handle */
+#user-channel-list::-webkit-scrollbar-thumb:vertical {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border: 5px solid lavender;
+}
+
+/* Handle on hover */
+#user-channel-list::-webkit-scrollbar-thumb:hover {
+  background: rgb(197, 41, 41);
+}
+
+#chat-view {
+  height: 100%;
+  max-width: 600px;
+}
+
+#chat-view > * {
+  width: 100%;
 }
 
 #chat-box {
-    border: 1px solid coral;
-    height: 100px;
+  height: 55vh;
+  border: 1px solid coral;
+}
+
+#chat-view > section {
+  height: 5vh;
+}
+
+#chat-view > section > * {
+  height: 30px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.user {
+  display: flex;
+  margin: 5px;
+}
+
+.user:hover {
+  background-color: white;
+}
+
+.nick {
+  width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.btn {
+  border: 1px solid gray;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.btn:hover {
+  background-color: rgb(199, 197, 197);
+  cursor: pointer;
+}
+
+.btn-blue {
+  background-color: var(--bg-btn-main);
+}
+
+.btn-blue:hover {
+  background-color: cornflowerblue;
+}
+
+.list-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid cornflowerblue;
+}
+
+.list-item:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+ul > .active {
+  background-color: white !important;
 }

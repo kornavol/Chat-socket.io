@@ -1,7 +1,7 @@
 {
   "name": "socket",
   "version": "1.0.0",
-  "description": "rainig project (Websocket)",
+  "description": "trainig project (Websocket)",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
